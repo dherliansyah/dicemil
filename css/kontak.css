@@ -1,0 +1,19 @@
+.navbar {
+				background-color:#ffffff;
+				border:0px ;
+
+			}
+			.navbar-brand {
+				font-size:30px;
+			}
+
+			.nav  a {
+				font-size:18px;
+			}
+			.nav a:hover {
+				color:#ff9900 !important;
+			}
+			.navbar-brand {
+				font-size:30px;
+				color:#bbb000 !important;
+			}
