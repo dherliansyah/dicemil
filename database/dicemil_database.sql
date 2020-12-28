@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jul 2019 pada 08.56
+-- Waktu pembuatan: 28 Des 2020 pada 18.37
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -63,8 +63,8 @@ CREATE TABLE `diskon_tbl` (
 --
 
 INSERT INTO `diskon_tbl` (`id_diskon`, `keterangan_diskon`, `kategori_diskon`, `status`, `diskon`) VALUES
-(3, 'gender', 'laki-laki', '1', 50),
-(4, 'gender', 'perempuan', '1', 10),
+(3, 'gender', 'laki-laki', '1', 10),
+(4, 'gender', 'perempuan', '0', 10),
 (5, 'tanggal_lahir', 'laki-laki dan perempuan', '0', 0);
 
 -- --------------------------------------------------------
@@ -114,9 +114,9 @@ CREATE TABLE `member_tbl` (
 --
 
 INSERT INTO `member_tbl` (`id_member`, `nama`, `username`, `password`, `email`, `no_telp`, `gender`, `tanggal_lahir`, `alamat`, `createdate`) VALUES
-(22, 'sasa', 'sasa', 'sasa', 'sasa@gmail.com', '082114314831', 'perempuan', '2019-05-17', 'bekasi timur', '2019-04-02'),
+(22, 'sasa', 'sasa', 'sasa', 'riotri1717@gmail.com', '082114314831', 'perempuan', '2019-05-17', 'bekasi timur', '2019-04-02'),
 (23, 'diki', 'diki', 'diki', 'dikiherliansyah123@gmail.com', '082114314831', 'laki-laki', '2019-05-17', 'Jl. Mekar Sari RT06/03 No.36', '2019-04-02'),
-(24, 'dodo', 'dodo', 'didi', 'dodo@gmail.com', '082114314876', 'laki-laki', '1999-12-12', 'bekasi barat', '2019-04-10'),
+(24, 'dodo', 'dodo', 'didi', '41515310032@student.mercubuana.ac.id', '082114314876', 'laki-laki', '1999-12-12', 'bekasi barat', '2019-04-10'),
 (25, 'sisi', 'dina', 'dudu', 'sisi@gmail.com', '08138877655', 'perempuan', '2019-05-17', 'bekasi', '2019-04-10');
 
 -- --------------------------------------------------------
@@ -179,31 +179,6 @@ CREATE TABLE `order_detail_tbl` (
 --
 
 INSERT INTO `order_detail_tbl` (`order_detail_id`, `order_id`, `produk`, `status_pengiriman`, `keterangan_pengiriman`, `jam_pengiriman`, `qty`, `jumlah_harga`, `no_telp`, `kecamatan`, `kelurahan`, `alamat`, `ongkos_kirim`, `diskon`) VALUES
-(55, 55, 'CHICKEN FETTUCCINE ALLA ITALIA', 'delivery', 'sekarang', '', 2, '200000', '082114314831', 'pancoran', 'pancoran', 'Jl. raya pancoran jaya no.20', 5000, 0),
-(56, 56, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 2, '80000', '232323', 'tebet', 'manggarai selatan', 'egege', 10000, 0),
-(57, 57, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '17.00', 1, '25000', '081398870871', 'tebet', 'manggarai selatan', 'Jl. manggarai selatan raya no.20', 10000, 0),
-(58, 58, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '40000', '082114314831', 'pancoran', 'cikoko', 'jl. pancoran raya no.20', 5000, 0),
-(59, 59, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '25000', '082114314831', 'pancoran', 'pancoran', 'Jl. pancoran raya no.20', 5000, 0),
-(60, 60, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '35000', '081398870871', 'tebet', 'bukit duri', 'jl. bukit duri no.20', 10000, 0),
-(61, 61, 'SPILTZA SIGNATURE', 'delivery', 'sekarang', '', 1, '70000', '082114314831', 'tebet', 'menteng dalam', 'jl. menteng dalam no.20', 10000, 0),
-(62, 62, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '17.30', 1, '35000', '081398870871', 'pancoran', 'duren tiga', 'Jl. duren tiga blok.A no.20', 5000, 0),
-(63, 63, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '35000', '082114314831', 'pancoran', 'cikoko', 'Jl. Cikoko Raya No.23', 5000, 0),
-(64, 64, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '135000', '02112121212', 'tebet', 'menteng dalam', 'Jl. Menteng dalam no.20', 10000, 0),
-(65, 64, 'SPILTZA SIGNATURE', 'take_away', 'nanti', '18.00', 1, '135000', '02112121212', 'tebet', 'menteng dalam', 'Jl. Menteng dalam no.20', 10000, 0),
-(66, 74, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '18.30', 1, '45000', '676767', '-', '-', '-', 0, 0),
-(67, 75, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '18.00', 1, '45000', '3353535', '-', '-', '-', 0, 0),
-(68, 76, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '45000', '765765', 'pancoran', 'pancoran', 'iuhkjhkj', 5000, 0),
-(69, 77, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '18.00', 1, '45000', '987987987', 'tebet', 'menteng dalam', 'kjhkh', 10000, 0),
-(70, 78, 'POCKET BITES PIZZA        ', 'take_away', 'sekarang', '', 1, '45000', '876876878667', '-', '-', '-', 0, 0),
-(71, 79, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '18.30', 1, '45000', 'jhgjhgjhg', '-', '-', '-', 0, 0),
-(72, 80, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '17.00', 1, '45000', 'kjhkjhkjh', '-', '-', '-', 0, 0),
-(73, 81, 'POCKET BITES PIZZA        ', 'take_away', 'sekarang', '', 1, '45000', '8768768', 'pancoran', 'pancoran', 'lkjlkjlkj', 5000, 0),
-(74, 82, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '45000', '2234234', 'tebet', 'manggarai', 'sdsvsdsdvsdvv', 10000, 0),
-(75, 83, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '17.30', 1, '45000', '346346436', 'tebet', 'manggarai selatan', 'dvdvdvxvxcvxc', 10000, 0),
-(76, 84, 'POCKET BITES PIZZA        ', 'take_away', 'sekarang', '', 1, '45000', 'sdbdffdb', 'tebet', 'kebon baru', 'sbsdbdssdbsdb', 10000, 0),
-(77, 85, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '17.00', 1, '45000', '3433434', 'pancoran', 'kalibata', 'dfbdfbfdbd', 5000, 0),
-(78, 86, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '35000', '082114314831', 'pancoran', 'pancoran', 'Jl. Pancoran raya no.20', 5000, 0),
-(79, 87, 'CHICKEN FETTUCCINE ALLA ITALIA', 'delivery', 'sekarang', '', 1, '70000', '081398870871', 'tebet', 'kebon baru', 'bekasi barat ', 10000, 0),
 (80, 89, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '17.00', 1, '35000', '082114314831', 'pancoran', 'duren tiga', 'bekasi', 5000, 0),
 (81, 90, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '17.00', 1, '35000', '082114314831', 'pancoran', 'duren tiga', 'bekasi', 5000, 0),
 (82, 92, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '35000', '081398870871', 'pancoran', 'pengadegan', 'bekasi', 5000, 0),
@@ -245,7 +220,21 @@ INSERT INTO `order_detail_tbl` (`order_detail_id`, `order_id`, `produk`, `status
 (118, 130, 'SPILTZA SIGNATURE', 'delivery', 'sekarang', '', 1, '0', '08121212', 'tebet', 'tebet barat', 'bekasi', 10000, 0),
 (119, 131, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '25000', '081398870871', 'tebet', 'menteng dalam', 'bekasi', 10000, 25000),
 (120, 132, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '75000', '08121212', 'tebet', 'tebet barat', 'bekasi', 10000, 25000),
-(121, 132, 'SPILTZA SIGNATURE', 'delivery', 'sekarang', '', 1, '75000', '08121212', 'tebet', 'tebet barat', 'bekasi', 10000, 50000);
+(121, 132, 'SPILTZA SIGNATURE', 'delivery', 'sekarang', '', 1, '75000', '08121212', 'tebet', 'tebet barat', 'bekasi', 10000, 50000),
+(122, 133, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '50000', '08121212', 'tebet', 'kebon baru', 'bekasi', 10000, 0),
+(123, 134, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '50000', '081312123432', 'pancoran', 'pancoran', 'Jl. Pancoran Raya No.20', 5000, 0),
+(124, 135, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '18.00', 1, '50000', '0812121121212', '-', '-', '-', 0, 0),
+(125, 137, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '19.00', 1, '50000', '1212121212121', '-', '-', '-', 0, 0),
+(126, 138, 'POCKET BITES PIZZA        ', 'take_away', 'sekarang', '', 1, '50000', '082114314831', '-', '-', '-', 0, 0),
+(127, 139, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '19.30', 1, '50000', '121212121', '-', '-', '-', 0, 0),
+(128, 140, 'POCKET BITES PIZZA        ', 'take_away', 'nanti', '18.30', 1, '50000', '082114314831', '-', '-', '-', 0, 0),
+(129, 141, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '50000', '082114314831', 'tebet', 'manggarai selatan', 'bekasi', 10000, 0),
+(130, 142, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '50000', '082114314831', 'pancoran', 'pancoran', 'bekasi timur', 5000, 0),
+(131, 143, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '120000', '08121212', 'pancoran', 'kalibata', 'diki herliansyah', 5000, 10000),
+(132, 143, 'SPILTZA SIGNATURE', 'delivery', 'nanti', '17.00', 1, '120000', '08121212', 'pancoran', 'kalibata', 'diki herliansyah', 5000, 20000),
+(133, 144, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 1, '40000', '082114314831', 'pancoran', 'duren tiga', 'jl. duren tiga', 5000, 10000),
+(134, 145, 'POCKET BITES PIZZA        ', 'delivery', 'sekarang', '', 2, '100000', '082114314831', 'pancoran', 'kalibata', 'bekasi jaya', 5000, 0),
+(135, 146, 'POCKET BITES PIZZA        ', 'delivery', 'nanti', '15.00', 2, '100000', '082114314831', 'pancoran', 'kalibata', 'bkeasi raya', 5000, 0);
 
 -- --------------------------------------------------------
 
@@ -342,9 +331,15 @@ INSERT INTO `order_tbl` (`order_id`, `customer_username`, `total`, `status`, `no
 (127, 'diki', 85000, 'Belum Transfer', '333333333333333', '2019-07-26'),
 (128, 'diki', 80000, 'Belum Transfer', '111111111111111', '2019-07-26'),
 (129, 'diki', 85000, 'Belum Transfer', '333333333333333', '2019-07-26'),
-(130, 'diki', 85000, 'Belum Transfer', '333333333333333', '2019-07-26'),
-(131, 'diki', 35000, 'Belum Transfer', '333333333333333', '2019-07-26'),
-(132, 'diki', 85000, 'Belum Transfer', '333333333333333', '2019-07-26');
+(138, 'diki', 0, 'Belum Transfer', '111111111111111', '2019-08-15'),
+(139, 'jono', 50000, 'Belum Transfer', '222222222222222', '2019-08-15'),
+(140, 'diki', 50000, 'Belum Transfer', '111111111111111', '2019-08-15'),
+(141, 'diki', 60000, 'Belum Transfer', '333333333333333', '2019-09-03'),
+(142, 'diki', 55000, 'sudah dikonfirmasi', '333333333333333', '2019-09-03'),
+(143, 'diki', 125000, 'sudah transfer', '333333333333333', '2019-09-10'),
+(144, 'diki', 45000, 'sudah dikonfirmasi', '111111111111111', '2019-09-27'),
+(145, 'bekasi', 105000, 'sudah dikonfirmasi', '222222222222222', '2020-01-13'),
+(146, 'diki herliansyah', 105000, 'Belum Transfer', '333333333333333', '2020-10-29');
 
 -- --------------------------------------------------------
 
@@ -367,19 +362,10 @@ CREATE TABLE `pembayaran_tbl` (
 --
 
 INSERT INTO `pembayaran_tbl` (`id_pembayaran`, `order_id`, `nama_pengirim`, `nomor_invoice`, `jumlah_transfer`, `gambar_transfer`, `tanggal_upload`) VALUES
-(38, '55', 'diki', 'DICEMIL/55', '210000', '26-18-PB1.jpg', '2019-05-27 00:00:00'),
-(39, '57', 'sasa', 'DICEMIL/57', '100000', 'wallpaper_garuda9.png', '2019-05-28 00:00:00'),
-(40, '58', 'diki', 'DICEMIL/58', '100000', 'wallpaper_garuda10.png', '2019-05-28 00:00:00'),
-(41, '59', 'sasa', 'DICEMIL/59', '50000', 'wallpaper_garuda11.png', '2019-05-28 00:00:00'),
-(42, '56', 'jono', 'DICEMIL/56', '10000', 'wallpaper_garuda12.png', '2019-05-28 00:00:00'),
-(43, '61', 'jopi', 'DICEMIL/61', '100000', 'f78309c7b13c2e251ce1b5e2dd79ffcb3.png', '2019-06-15 00:00:00'),
-(44, '63', 'diki', 'DICEMIL/63', '50000', 'wallpaper_garuda13.png', '2019-06-28 00:00:00'),
-(45, '64', 'diki', 'DICEMIL/64', '100000', 'f78309c7b13c2e251ce1b5e2dd79ffcb4.png', '2019-07-05 00:00:00'),
-(46, '86', 'diki', 'DICEMIL/86', '50000', 'f78309c7b13c2e251ce1b5e2dd79ffcb5.png', '2019-07-16 00:00:00'),
-(47, '119', 'diki', 'DICEMIL/119', '100000', 'f78309c7b13c2e251ce1b5e2dd79ffcb6.png', '2019-07-16 00:00:00'),
-(48, '121', 'diki', 'DICEMIL/121', '150000', 'f78309c7b13c2e251ce1b5e2dd79ffcb7.png', '2019-07-17 00:00:00'),
-(49, '122', 'sdsdv', 'zvxcvxcv', '2323232', 'f78309c7b13c2e251ce1b5e2dd79ffcb8.png', '2019-07-18 00:00:00'),
-(50, '123', 'diki', 'DICEMIL/123', '100000', 'f78309c7b13c2e251ce1b5e2dd79ffcb9.png', '2019-07-26 00:00:00');
+(1, '142', 'diki', 'dicemil/142', '20000', 'f78309c7b13c2e251ce1b5e2dd79ffcb11.png', '2019-09-03 00:00:00'),
+(2, '143', 'diki', 'DICEMIL/143', '200000', 'f78309c7b13c2e251ce1b5e2dd79ffcb12.png', '2019-09-10 00:00:00'),
+(3, '144', 'diki', 'DICEMIL/144', '100000', 'wallpapergaruda.png', '2019-09-27 00:00:00'),
+(4, '145', 'diki', 'DICEMIL/145', '100000', 'download.jpg', '2020-01-13 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -515,19 +501,19 @@ ALTER TABLE `ongkir_tbl`
 -- AUTO_INCREMENT untuk tabel `order_detail_tbl`
 --
 ALTER TABLE `order_detail_tbl`
-  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT untuk tabel `order_tbl`
 --
 ALTER TABLE `order_tbl`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran_tbl`
 --
 ALTER TABLE `pembayaran_tbl`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `product_tbl`
