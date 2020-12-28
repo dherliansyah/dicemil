@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'dicemil_database',
+	'hostname' => 'www.db4free.net',
+	'username' => 'padangdik',
+	'password' => 'padangdik',
+	'database' => 'dicemil',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
